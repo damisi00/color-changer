@@ -1,15 +1,18 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import NavBar from './components/Navbar.jsx'
 import Section from './components/Section.jsx'
-// import './App.css'
+
 
 function App() {
-
+  const [type, setType] = useState("simple-color")
+  const handleType = (type) => {
+    setType(type);
+  }
 
   return (
     <>
-      <NavBar />
-      <Section />
+      <NavBar handleType={handleType} />
+      <Section type={type} />
     </>
   )
 }

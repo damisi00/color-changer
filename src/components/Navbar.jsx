@@ -1,24 +1,14 @@
-import { useState }from 'react'
 
-const simpleColors = [
-  'aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon', 'navy', 'olive', 'purple', 'red', 'silver', 'teal', 'white', 'yellow'
-]
-const Navbar = () => {
-  const [changeColor, setChangeColor] = useState('#FFFFFF');
-  const handleSimple = () => {
-    const randomIndex= Math.floor(Math.random() * simpleColors.length);
-    const randomSimpleColor = simpleColors[randomIndex];
-    setChangeColor(randomSimpleColor);
-
-  }
+const Navbar = ({handleType}) => {
+  
   return (
     <>
         <nav>
           <div className='wrapper'> 
               <h1>Color Flipper</h1>
               <div className="links">
-                <a onClick={handleSimple}>Simple</a>
-                <a>Hex</a>
+                <a onClick={()=> handleType("simple-color")}>Simple</a>
+                <a onClick={()=> handleType("hex-color")}>Hex</a>
               </div>
             </div>
         </nav>

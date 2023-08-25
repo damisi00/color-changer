@@ -6,13 +6,13 @@ const Section = ({type}) => {
 
   return (
     <>
-        <main>
+        <section>
         {
             type === 'simple-color' ?
             <Simple /> :
             <Hex /> 
         } 
-        </main>
+        </section>
     </>
   )
 }

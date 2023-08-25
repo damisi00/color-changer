@@ -1,7 +1,7 @@
 import { useState }from 'react'
 
 const Hex = () => {
-    const [changeColor, setChangeColor] = useState('#FFFFFF');
+    const [changeColor, setChangeColor] = useState('#FF1F5F3');
 
     const handleChange = () => {
         const randomHexColor = '#' + Math.floor(Math.random() * 16777215).toString(16).toLocaleUpperCase(0);

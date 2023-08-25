@@ -5,7 +5,7 @@ const simpleColors = [
 ]
 
 const Simple = () => {
-    const [changeColor, setChangeColor] = useState('White');
+    const [changeColor, setChangeColor] = useState('Transparent');
 
     const handleSimple = () => {
         const randomIndex= Math.floor(Math.random() * simpleColors.length);
